@@ -1,0 +1,29 @@
+{% load static %}
+
+{% include 'snippets/header.html'%}
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+  {% include 'snippets/sidebar.html'%}
+    
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+     {% include 'snippets/navbar.html'%}
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- DataTales Example -->
+          {% if user.is_authenticated %}
+            {% include 'snippets/tables.html'%}
+          {% else %}
+            {% include 'snippets/nologin.html'%}
+          {% endif %}
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+{% include 'snippets/footer.html'%}

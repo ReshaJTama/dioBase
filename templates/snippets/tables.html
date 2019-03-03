@@ -1,0 +1,56 @@
+{% load static %}
+<div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Data List</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                  
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama Obat</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Tanggal Masuk</th>
+                        <th scope="col">Tanggal Kadaluarsa</th>
+                        <th scope="col">PIC</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nama Obat</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Tanggal Masuk</th>
+                        <th scope="col">Tanggal Kadaluarsa</th>
+                        <th scope="col">PIC</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    {% block tables %}
+                         {% for obats in obat %}
+                      <tr>
+                        <th scope="row">{{obats.id}}</th>
+                        <td>{{obats.nameObat}}</td>
+                        <td>{{obats.qtyObat}}</td>
+                        <td>{{obats.categoryObat2}}</td>
+                        <td>{{obats.tanggalObat}}</td>
+                        <td>{{obats.kadaluarsaObat}}</td>
+                        <td>{{obats.pic}}</td>
+                      </tr>
+                    {% endfor %}
+
+                    {% endblock%}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>

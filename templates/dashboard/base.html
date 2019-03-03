@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{%block tables%}
+                    {% for obats in obat %}
+                      <tr>
+                        <th scope="row">{{obats.id}}</th>
+                        <td>{{obats.nameObat}}</td>
+                        <td>{{obats.qtyObat}}</td>
+                        <td>{{obats.tanggalObat}}</td>
+                        <td>{{obats.categoryObat}}</td>
+                        <td>{{obats.kadaluarsaObat}}</td>
+                      </tr>
+                    {% endfor %}
+{% endblock %}
